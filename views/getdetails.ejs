@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/united/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        
+    <title>Details</title>
+</head>
+
+<body>
+    <!-- <div>
+        <a href="/getdetails">Get Details</a>
+    </div> -->
+    <hr>
+
+    <% if(details!=null) { %>
+        <table class="table">
+            <tr>
+                <!-- <th scope="col">#</th> -->
+                <th >userId</th>
+                <th >id</th>
+                <th >title </th>
+                <th >body</th>
+                <!-- <th >password </th> -->
+            </tr>
+            <% details.forEach(function(item){ %>
+                <tr>
+                    <td>
+                        <%= item.userId%>
+                    </td>
+                    <td>
+                        <%= item.id%>
+                    </td>
+                    <td>
+                        <%= item.title%>
+                    </td>
+                    <td>
+                        <%= item.body%>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+        <% } %>
+
+
+        <div style="text-align: center;">
+            <div style="padding: 20px;">
+                <a style="border: 1px solid blue;padding: 10px;" href="/success">Dashboard</a>
+            </div>
+        </div>
+</body>
+
+</html>
